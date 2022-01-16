@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+const developerName = "Developed By Vaibhav Rawat."
 const Weathercard = ({
   temp,
   humidity,
@@ -48,7 +48,7 @@ const Weathercard = ({
 
         <div className="weatherInfo">
           <div className="temperature">
-            <span>{temp}&deg;</span>
+            <span>{temp}&deg;C</span>
           </div>
 
           <div className="description">
@@ -59,7 +59,7 @@ const Weathercard = ({
           </div>
         </div>
 
-        <div className="date"> {new Date().toLocaleString()} </div>
+        <div className="date"> {new Date().toLocaleString('en-US')} </div>
 
         {/* our 4column section  */}
         <div className="extra-temp">
@@ -107,6 +107,7 @@ const Weathercard = ({
             </div>
           </div>
         </div>
+        <div className="developer"> {developerName} </div>
       </article>
     </>
   );

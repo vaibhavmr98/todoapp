@@ -67,9 +67,10 @@ body {
   /* flex: 0 0 40%; */
   width: 100%;
   font-size: 65px;
-  display: flex;
+  display: inline;
+  text-align: center;
   justify-content: space-around;
-  margin-right: 20px;
+  margin-left: 10px;
 }
 .widget .weatherInfo .description {
   /* flex: 0 60%; */
@@ -105,8 +106,7 @@ body {
 .widget .extra-temp {
   flex: 1 100%;
   padding: 5% 0;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+ 
   background: #fafafa;
   display: block;
   grid-template-columns: repeat(2, 1fr);
@@ -138,6 +138,23 @@ body {
   font-size: 15px;
 }
 
+
+.widget .developer {
+  /* flex: 0 0 30%; */
+  height: 20%;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #70c1b3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px;
+  text-align: center;
+}
 /* input search button style  */
 
 .search {
