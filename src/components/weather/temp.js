@@ -1,17 +1,33 @@
 import React, { useState, useEffect } from "react";
 import Weathercard from "./weathercard";
 import "./style.css";
+import swal from 'sweetalert';
 
 const Temp = () => {
-  const [searchValue, setSearchValue] = useState("pune");
+  const [searchValue, setSearchValue] = useState("ahmedabad");
   const [tempInfo, setTempInfo] = useState({});
 
   const getWeatherInfo = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid={WriteYourAPIKey}`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=79ca0cd70c7b075a745632223e6e57fe`;
 
       let res = await fetch(url);
+      if (res.ok) {
+        
+      }else{
+        swal({
+          title: "Opps!",
+          text: "No City found!",
+          icon: "warning",
+          button: "Okay!",
+        }).then((value) => {
+          setSearchValue("ahmedabad")
+        });
+
+        
+      }
       let data = await res.json();
+      
 
       const { temp, humidity, pressure } = data.main;
       const { main: weathermood } = data.weather[0];
@@ -42,6 +58,7 @@ const Temp = () => {
 
   return (
     <>
+     <h1  className="text-light text-center mb-3">Weather App</h1>
       <div className="wrap">
         <div className="search">
           <input
