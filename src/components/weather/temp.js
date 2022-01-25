@@ -54,7 +54,7 @@ const Temp = () => {
 
   useEffect(() => {
     getWeatherInfo();
-  }, []);
+  },[]);
 
   return (
     <>
