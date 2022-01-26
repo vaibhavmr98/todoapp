@@ -21,12 +21,12 @@ html {
 
 .child-div {
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 5rem;
 }
 
 .child-div figure img {
-  width: 10rem;
-  height: 8rem;
+  /* width: 10rem; */
+  height: 14rem;
 }
 
 .child-div figure figcaption {
@@ -37,8 +37,8 @@ html {
 }
 
 input {
-  /* display: block; */
-  min-width: 40rem;
+  
+  min-width: 30rem;
   height: 3.4rem;
   padding: 2rem 1.2rem;
   font-size: 1.8rem;
@@ -114,7 +114,7 @@ input:focus {
   border-radius: 0.5rem;
   margin-bottom: 0.7rem;
   margin-left: 1rem;
-  min-width: 40rem;
+  min-width: 10rem;
   word-break: break-word;
   background: rgb(85, 41, 220);
   display: flex;
